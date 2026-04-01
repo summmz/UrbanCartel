@@ -78,7 +78,7 @@ function vitePluginManusDebugCollector(): Plugin {
   return {
     name: "manus-debug-collector",
 
-    transformIndexHtml(html) {
+    transformIndexHtml(html: string) {
       if (process.env.NODE_ENV === "production") {
         return html;
       }
@@ -147,7 +147,7 @@ function vitePluginManusDebugCollector(): Plugin {
         });
       });
     },
-  };
+  } as any;
 }
 
 const plugins = [react(), tailwindcss(), jsxLocPlugin(), vitePluginManusRuntime(), vitePluginManusDebugCollector()];
