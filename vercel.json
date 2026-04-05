@@ -2,8 +2,15 @@
   "version": 2,
   "builds": [
     {
-      "src": "api/_bundle.mjs",
-      "use": "@vercel/node"
+      "src": "api/index.ts",
+      "use": "@vercel/node",
+      "config": {
+        "includeFiles": [
+          "server/**/*.ts",
+          "shared/**/*.ts",
+          "drizzle/**/*.ts"
+        ]
+      }
     },
     {
       "src": "package.json",
@@ -14,7 +21,7 @@
   "rewrites": [
     {
       "source": "/api/(.*)",
-      "destination": "/api/_bundle.mjs"
+      "destination": "/api/index.ts"
     },
     {
       "source": "/(.*)",
