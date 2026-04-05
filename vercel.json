@@ -3,7 +3,14 @@
   "builds": [
     {
       "src": "api/index.ts",
-      "use": "@vercel/node"
+      "use": "@vercel/node",
+      "config": {
+        "includeFiles": [
+          "server/**",
+          "shared/**",
+          "drizzle/**"
+        ]
+      }
     },
     {
       "src": "package.json",
@@ -11,11 +18,6 @@
       "config": { "distDir": "dist/public" }
     }
   ],
-  "functions": {
-    "api/**/*.ts": {
-      "includeFiles": "server/**,shared/**,drizzle/**"
-    }
-  },
   "rewrites": [
     {
       "source": "/api/(.*)",
