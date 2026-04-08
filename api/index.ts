@@ -1,4 +1,6 @@
-import express, { Request, Response } from "express";
+import express from "express";
 const app = express();
-app.get("/api/health", (_req: Request, res: Response) => res.json({ ok: true }));
+app.get("/api/health", (req, res) => {
+  res.send(JSON.stringify({ ok: true }));
+});
 export default app;
