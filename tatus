@@ -1,0 +1,5 @@
+[33me39ec2a[m[33m ([m[1;36mHEAD[m[33m -> [m[1;32mmain[m[33m, [m[1;31morigin/main[m[33m)[m fix: pure serverless handler no express
+[33mf3159dc[m fix: skip TS check in API
+[33mb4f9489[m fix: minimal API
+[33m4368b94[m fix: add TS types to API
+[33m3a45635[m debugging
