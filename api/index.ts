@@ -1,7 +1,4 @@
 // @ts-nocheck
-import express from "express";
-const app = express();
-app.get("/api/health", (req, res) => {
-  res.send(JSON.stringify({ ok: true }));
-});
-export default app;
+export default function handler(req, res) {
+  res.status(200).json({ ok: true });
+}
